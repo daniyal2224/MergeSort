@@ -6,7 +6,7 @@ namespace MergeSort
     {
         public static void Main(String[] args)
         {
-            int[] arr = { 12, 11, 13, 5, 6, 7 };
+            int[] arr = { 11 , 15, 17 ,3, 2 ,13 };
             Console.WriteLine("Given Array");
             MergeSort.printArray(arr);
             MergeSort ob = new MergeSort();

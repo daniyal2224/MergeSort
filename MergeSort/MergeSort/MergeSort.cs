@@ -5,8 +5,11 @@ namespace MergeSort
 {
     class MergeSort
     {
+
         void merge(int[] arr, int left, int middle, int right)
         {
+            // Find sizes of two
+            // subarrays to be merged
             int numberLeft = middle - left + 1;
             int numberRight = right - middle;
 
@@ -20,8 +23,16 @@ namespace MergeSort
                 LeftArray[i] = arr[left + i];
             for (j = 0; j < numberRight; ++j)
                 RightArray[j] = arr[middle + 1 + j];
+
+            // Merge the temp arrays
+
+            // Initial indexes of first
+            // and second subarrays
             i = 0;
             j = 0;
+
+            // Initial index of merged
+            // subarry array
             int k = left;
             while (i < numberLeft && j < numberRight)
             {
@@ -71,6 +82,9 @@ namespace MergeSort
                 merge(arr, l, m, r);
             }
         }
+
+        // A utility function to
+        // print array of size n */
         public static void printArray(int[] arr)
         {
             int n = arr.Length;
@@ -79,6 +93,4 @@ namespace MergeSort
             Console.WriteLine();
         }
     }
-
-    // This code is contributed by Princi Singh
 }
